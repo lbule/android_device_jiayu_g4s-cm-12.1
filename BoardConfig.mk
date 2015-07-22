@@ -39,7 +39,8 @@ TARGET_OTA_ASSERT_DEVICE := g4s,lcsh92_wet_jb9
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
-# Disable memcpy opt (for audio libraries)ARCH_ARM_HAVE_TLS_REGISTER := true
+# Disable memcpy opt (for audio libraries)
+ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # EGL
