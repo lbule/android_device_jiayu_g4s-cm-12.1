@@ -22,10 +22,10 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) \
 
 $(INSTALLED_RAMDISK_TARGET): $(MKBOOTFS) $(INTERNAL_RAMDISK_FILES) | $(MINIGZIP)
 	$(call pretty,"Target mtk ram disk: $@")
-	$(hide) mv out/target/product/k1_turbo/root/init out/target/product/k1_turbo/root/init2
-	$(hide) mv out/target/product/k1_turbo/root/custom_init out/target/product/k1_turbo/root/init
+	$(hide) mv out/target/product/g4s/root/init out/target/product/g4s/root/init2
+	$(hide) mv out/target/product/g4s/root/custom_init out/target/product/g4s/root/init
 	$(hide) $(MKBOOTFS) $(TARGET_ROOT_OUT) | $(MINIGZIP) > $@
-	$(hide) device/kingzone/k1_turbo/pack.pl ROOTFS $@
+	$(hide) device/jiayu/g4s/pack.pl ROOTFS $@
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(BOOTIMAGE_EXTRA_DEPS)
 	$(call pretty,"Target boot image: $@")
