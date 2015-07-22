@@ -77,10 +77,14 @@ BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/jiayu/g4s/bluetooth
 
+# CWM
+TARGET_RECOVERY_FSTAB := device/jiayu/g4s/rootdir/recovery.fstab
+BOARD_HAS_NO_SELECT_BUTTON := true
+
 # TWRP
+#RECOVERY_VARIANT=twrp
 DEVICE_RESOLUTION := 720x1280
 #
-TARGET_RECOVERY_FSTAB := device/jiayu/g4s/rootdir/recovery.fstab
 TARGET_PREBUILT_RECOVERY_KERNEL := device/jiayu/g4s/kernel
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file
 BOARD_HAS_LARGE_FILESYSTEM := true
