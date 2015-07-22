@@ -85,8 +85,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 #RECOVERY_VARIANT=twrp
 DEVICE_RESOLUTION := 720x1280
 #
-TARGET_PREBUILT_RECOVERY_KERNEL := device/jiayu/g4s/kernel
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file
 BOARD_HAS_LARGE_FILESYSTEM := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_INCLUDE_JB_CRYPTO := true
@@ -101,6 +99,7 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file
 
 BOARD_SEPOLICY_DIRS := \
        device/jiayu/g4s/sepolicy
