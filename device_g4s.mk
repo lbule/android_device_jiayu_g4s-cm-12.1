@@ -74,6 +74,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/init.recovery.mt6592.rc:root/init.recovery.mt6592.rc \
     $(LOCAL_PATH)/rootdir/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \    
     $(LOCAL_PATH)/rootdir/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
     $(LOCAL_PATH)/rootdir/sbin/busybox:root/sbin/busybox \
     $(LOCAL_PATH)/rootdir/custom_init:root/custom_init \
@@ -115,7 +116,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	ro.allow.mock.location=1 \
 	ro.debuggable=1 \
 	ro.zygote=zygote32 \
-	persist.sys.usb.config=mtp,adb
+	persist.sys.usb.config=mtp
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_g4s
